@@ -4,6 +4,14 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  server: {
+    port: 5173,
+    host: '0.0.0.0', // Listen on all network interfaces for Digital Ocean
+  },
+  preview: {
+    port: 5173,
+    host: '0.0.0.0',
+  },
   plugins: [
     react(),
     runtimeErrorOverlay(),
